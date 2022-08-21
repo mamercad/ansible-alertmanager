@@ -45,6 +45,7 @@
       become: false
       unarchive:
         src: "/tmp/alertmanager-{{ alertmanager_version }}.linux-{{ go_arch }}.tar.gz"
+        remote_src: true
         dest: "/tmp"
         mode: 0755
         creates: "/tmp/alertmanager-{{ alertmanager_version }}.linux-{{ go_arch }}/alertmanager"
